@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+.home:hover{
+  /* box-shadow: 5px 5px 5px black ; */
+}
 .home{
+
   display: flex;
   justify-content: space-between;
   
@@ -14,6 +18,9 @@
   border-radius: 10px;
   transition: ease-in-out 0.5s;
 
+}
+.home:hover{
+  box-shadow: 2px 2px 2px black;
 }
 .border:hover{
   transition: ease-in-out 0.5s;
