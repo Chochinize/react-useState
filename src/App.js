@@ -1,23 +1,24 @@
-
-import Bar from './components/Bar.js';
-import Home from './components/Home';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import { Frame } from "./components/SuitCase";
+import Background from "./components/game/Background";
+import Player from "./components/game/Player";
 function App() {
 
+   
   return (
-       <Router>
-           <div className="App">
-             <Bar />
+     
+           <div className='h-screen'>
+          <Frame />
+         <div className='h-screen'>
+
+
+       <Background/>
+       
+
+        </div>
              
-             <div className="content">
-               <Switch>
-                <Route path="/">
-                  <Home />
-                </Route>
-              </Switch>
-             </div>
          </div>
-       </Router>
+               
+   
   );
 }
 

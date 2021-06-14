@@ -1,43 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
-.home:hover{
-  /* box-shadow: 5px 5px 5px black ; */
-}
-.home{
-
-  display: flex;
-  justify-content: space-between;
-  
-  font-family: Odibee Sans;
-  letter-spacing:  4px;
-  padding-bottom: 1px;
-  margin: 1px;
-}
-.border{
-  border: 1px solid black;
-  padding: 10px;
-  border-radius: 10px;
-  transition: ease-in-out 0.5s;
-
-}
-.home:hover{
-  box-shadow: 2px 2px 2px black;
-}
-.border:hover{
-  transition: ease-in-out 0.5s;
-  background-color: beige;
-  transform: scale(1.1);
-
-}
-.border1{
-  width: max-content;
-  height: max-content;
-  border: 1px solid black;
-  border-radius: 1px;
-}
-
-  
-  @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
-  }
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
