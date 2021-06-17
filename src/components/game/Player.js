@@ -2,8 +2,8 @@ import React, { useState,useEffect } from 'react'
 import tw from 'twin.macro'
 import Avatart from './../../images/spaceship.png'
 import styled from 'styled-components'
-
-
+// import missle from './../../images/missle.png';
+import Missle from './Missle';
 
 
  const   Player  = () => {
@@ -11,27 +11,46 @@ import styled from 'styled-components'
 
 
 
-const [move,setMove]=useState(5)
+const [moveY,setMoveY]=useState(5)
+const [moveX,setMoveX]=useState(5)
 
 
 
 
-let moveBy = 0;
+
+
+
+let moveByY = 0;
+let moveByX = 0;
+
 const handleKeyDown = (event) => {
     if(event.keyCode === 38|| event.keyCode === 87){
+        moveByY-=20; 
         
-       moveBy-=20; 
-    }else if (event.keyCode === 40 || event.keyCode ===83){
-        moveBy+=20
+    } if (event.keyCode === 40 || event.keyCode ===83){
+        moveByY+=20
     }
-    setMove(moveBy)
+     if(event.keyCode === 39){
+        moveByX+=20
+    }
+     if(event.keyCode === 37){
+        moveByX-=20
+    }
+    if(event.keyCode === 32){
+     
+        console.log(event);
+    }
+
+    
+    setMoveX(moveByX)
+    setMoveY(moveByY)
     // console.log('A key was pressed', event.keyCode);
   };
 
 
     useEffect(()=>{
         window.addEventListener('keydown',handleKeyDown)
-
+        
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
           };
@@ -42,17 +61,18 @@ const handleKeyDown = (event) => {
 
 
         const Space = styled.img`
-        position: relative;
+        position: absolute;
         width: 150px;
         height: 100px;
        
     `;
 
-    
+
         
         
     const Move = styled.div`
-        top: ${move+'px'};
+        top: ${moveY+'px'};
+        left: ${moveX+'px'};
     ${tw`
         w-32
         h-24
@@ -60,17 +80,18 @@ const handleKeyDown = (event) => {
 
     `}
     `
-        
+   
         
         
         return (
             <div>
 
+     
                 <Move>
-
                 <Space src={Avatart}/>
+
+                <Missle />
                
-            
                 </Move>
             </div>
         )

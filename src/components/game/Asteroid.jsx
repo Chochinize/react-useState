@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useEffect,useState} from 'react';
-
+import tw from 'twin.macro';
+import Missle from './Missle'
 
 let Asteroid = () => {
 
@@ -17,16 +18,11 @@ useEffect(()=>{
     setInterval(() => {
         
         setTimer(Date.now()) 
-    }, 10000);
+    },10000);
+    
 },[])
 
-useEffect(()=>{
 
-        setInterval(() => {
-            
-            setTimer(Date.now()) 
-        }, 10000);
-    },[])
 
 useEffect(()=>{
 
@@ -37,17 +33,31 @@ useEffect(()=>{
     
 let AsteroidMove = styled.div`
 position: relative;
-    top: ${randomTop+'px'};
-`
+top: ${randomTop+'px'};
+
+${tw`
+    
+`}    
+`;
+
+
 
 
     return (
-<AsteroidMove>
+    
 
-        <div className=' bg-asteroid  w-30 h-36  animate-astero-back bg-no-repeat '>
-            MAKAREL
+
+
+        <AsteroidMove>
+
+        <div className=' bg-asteroid  w-26 h-36  animate-astero-back bg-no-repeat'>
         </div>
+          
 </AsteroidMove>
+        
+     
+       
+       
     )
 }
 

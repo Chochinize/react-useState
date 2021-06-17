@@ -12,15 +12,25 @@ module.exports = {
         'from':{'background-position': '200% 0%'},
         'to': {'background-position' : '0% 0%'},
       },
+      'rocket':{
+        'from':{'background-position': '0 0'},
+        'to':{'background':'0% 100%'},
       },
+ 
+      },
+    
       animation: {
         'ltr-linear-infinite': 'ltr-linear-infinite 100s linear infinite',
         'astero-back': 'astero-back 10s linear infinite',
+        'rocket': 'rocket 10s linear infinite',
+        
       },
 
     backgroundImage: theme => ({
       'hero-pattern': "url('./images/space.png')",
       'asteroid': "url('./images/asteroid.png')",
+      'rocket': "url('./images/missle.jpg')",
+      
     }),
      
       
