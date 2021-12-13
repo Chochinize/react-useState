@@ -6,16 +6,16 @@ function App() {
    
   return (
      
-           <div className='h-screen'>
-          {/* <Frame /> */}
-         <div className='h-screen'>
+           <div className='h-full'>
+          
+         <div className='h-full'>
 
 
        <Background/>
        
-
+        {/* <Frame/> */}
         </div>
-             {/* <Countries /> */}
+         
          </div>
                
    

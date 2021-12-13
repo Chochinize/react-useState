@@ -13,9 +13,9 @@ const Background = () => {
     return (
         <div className='min-h-screen justify-center bg-hero-pattern bg-repeat overflow-hidden animate-ltr-linear-infinite'>
 
-            <Player />
-                {/* <Missle /> */}
+                
                <Asteroid />
+            <Player />
       
         </div>
     )

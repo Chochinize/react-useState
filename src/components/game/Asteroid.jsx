@@ -22,7 +22,7 @@ useEffect(()=>{
     
 },[])
 
-
+console.log(randomTop);
 
 useEffect(()=>{
 
@@ -34,10 +34,7 @@ useEffect(()=>{
 let AsteroidMove = styled.div`
 position: relative;
 top: ${randomTop+'px'};
-
-${tw`
-    
-`}    
+   
 `;
 
 

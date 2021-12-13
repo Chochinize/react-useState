@@ -2,7 +2,6 @@ import React, { useState,useEffect } from 'react'
 import tw from 'twin.macro'
 import Avatart from './../../images/spaceship.png'
 import styled from 'styled-components'
-// import missle from './../../images/missle.png';
 import Missle from './Missle';
 
 
@@ -13,6 +12,7 @@ import Missle from './Missle';
 
 const [moveY,setMoveY]=useState(5)
 const [moveX,setMoveX]=useState(5)
+const [shoot,setShoot]=useState(false);
 
 
 
@@ -22,6 +22,7 @@ const [moveX,setMoveX]=useState(5)
 
 let moveByY = 0;
 let moveByX = 0;
+let missle = 0;
 
 const handleKeyDown = (event) => {
     if(event.keyCode === 38|| event.keyCode === 87){
@@ -37,13 +38,15 @@ const handleKeyDown = (event) => {
         moveByX-=20
     }
     if(event.keyCode === 32){
-     
-        console.log(event);
+        
+        setShoot(true)
+        
     }
 
     
     setMoveX(moveByX)
     setMoveY(moveByY)
+
     // console.log('A key was pressed', event.keyCode);
   };
 
@@ -86,7 +89,9 @@ const handleKeyDown = (event) => {
         return (
             <div>
 
-     
+                <div>
+                    <img src={missle} alt="" />
+                </div>
                 <Move>
                 <Space src={Avatart}/>
 
