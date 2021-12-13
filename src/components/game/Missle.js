@@ -6,20 +6,19 @@ import {useState,useEffect} from 'react'
 const Missle = () => {
     
 
-    const [movement,setMovement] = useState([])
+    const [movement,setMovement] = useState(0)
 
     
     
     const Shoot = () =>{
         for(let i=0; i<window.innerWidth; i++){
-        console.log(i)
+            
         setMovement(window.innerWidth-i)
-        console.log(movement)
         }
 
     }
 
-console.log(window.innerWidth)
+
 // useEffect(() => {
 //     setMovement(400)
     
@@ -27,18 +26,17 @@ console.log(window.innerWidth)
 
         const Rocket =  styled.img`
         position: absolute;
-
-        
+        overflow: hidden;
+        left: ${movement + 'px'};
         z-index: 100;
-        width: 250px;
+        width: 150px;
         height: 100px;
         `
 
     
     return (
         <div onClick={Shoot}>
-
-           <img src={missle} className='w-10 h-10 invisible' />
+           <Rocket src={missle}/>
         </div>
     )
 }
