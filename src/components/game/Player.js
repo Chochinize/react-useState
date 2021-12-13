@@ -15,7 +15,7 @@ const [moveX,setMoveX]=useState(5)
 const [shoot,setShoot]=useState(false);
 
 
-
+console.log('object')
 
 
 
