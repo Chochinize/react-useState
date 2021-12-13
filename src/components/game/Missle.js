@@ -13,7 +13,10 @@ const Missle = () => {
     const Shoot = () =>{
         for(let i=0; i<window.innerWidth; i++){
             
-        setMovement(window.innerWidth-i)
+        setMovement(movement=>movement+i)
+        }
+        if(movement===window.innerWidth){
+            console.log('erreichet')
         }
 
     }
@@ -25,9 +28,9 @@ const Missle = () => {
 // },[])
 
         const Rocket =  styled.img`
-        position: absolute;
+        
         overflow: hidden;
-        left: ${movement + 'px'};
+        right: ${movement + 'px'};
         z-index: 100;
         width: 150px;
         height: 100px;
